@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cat > /home/py/app/config.py <<EOF
+from readthedocs.settings.sqlite import *
+SITE_ROOT = '/home/py/app/readthedocs'
+EOF
+
+su - py -c 'cd /home/py/app; DJANGO_SETTINGS_MODULE=config /home/py/venv/bin/python manage.py runserver 0.0.0.0:8000'
+
+#/bin/bash
