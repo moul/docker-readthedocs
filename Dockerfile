@@ -10,7 +10,7 @@ RUN adduser --gecos 'py' --disabled-password py
 RUN apt-get -qqy install \
     libxml2-dev libxslt1-dev expat libevent-dev wget \
     texlive texlive-latex-extra language-pack-en \
-    unzip python-dev
+    unzip python-dev git
 
 RUN mkdir -p $APPDIR && cd $APPDIR && \
     wget -q --no-check-certificate https://github.com/rtfd/readthedocs.org/archive/master.zip && \
