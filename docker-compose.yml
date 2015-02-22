@@ -1,0 +1,17 @@
+db:
+  image: sameersbn/postgresql:9.1-1
+  environment:
+    - DB_USER=docs
+    - DB_PASS=secretpassword
+    - DB_NAME=docs
+  volumes:
+    - pgsql:/var/lib/postgresql
+readthedocs:
+  image: moul/readthedocs
+  ports:
+    - "8000:8000"
+  links:
+    - db
+  volumes:
+    - user_builds:/app/user_builds
+
