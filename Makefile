@@ -8,3 +8,7 @@ release:
 
 run:
 	docker-compose run --service-ports --rm readthedocs
+debug-run:
+	docker-compose run --service-ports --rm readthedocs bash
+debug-app:
+	docker exec -ti dockerreadthedocs_readthedocs_run_9 bash
