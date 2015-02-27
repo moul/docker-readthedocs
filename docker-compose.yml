@@ -12,6 +12,15 @@ readthedocs:
     - "8000:8000"
   links:
     - db
+    - elasticsearch
+    - redis
   volumes:
     - user_builds:/app/user_builds
-
+elasticsearch:
+  image: jfroche/elasticsearch
+  ports:
+    - "9200:9200"
+  volumes:
+    - es:/var/lib/elasticsearch
+redis:
+  image: redis
