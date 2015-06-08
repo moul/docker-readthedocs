@@ -2,4 +2,4 @@ install:
   - curl -sLo - http://j.mp/install-travis-docker | sh -xe
 
 script:
-  - ./run 'docker build -t moul/readthedocs . && docker run moul/readthedocs echo Build succeed'
+  - ./run 'docker build -t moul/readthedocs . && docker run --entrypoint=bash moul/readthedocs -ec "echo Build succeed"'
