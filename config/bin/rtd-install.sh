@@ -13,7 +13,7 @@ PIP=/venv/bin/pip
 cp -f /etc/default/rtd-config.py $APPDIR/readthedocs/config.py
 $PIP install -U \
     --allow-external bzr --allow-unverified bzr \
-    -r $APPDIR/pip_requirements.txt
+    -r $APPDIR/requirements.txt
 cd $APPDIR && /venv/bin/python setup.py develop
 cd $APPDIR/readthedocs
 chown -R py $APPDIR
