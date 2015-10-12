@@ -5,7 +5,7 @@ db:
     - DB_PASS=secretpassword
     - DB_NAME=docs
   volumes:
-    - pgsql:/var/lib/postgresql
+    - ./pgsql:/var/lib/postgresql
 readthedocs:
   image: moul/readthedocs
   ports:
@@ -15,12 +15,12 @@ readthedocs:
     - elasticsearch
     - redis
   volumes:
-    - user_builds:/app/user_builds
+    - ./user_builds:/app/user_builds
 elasticsearch:
   image: jfroche/elasticsearch
   ports:
     - "9200:9200"
   volumes:
-    - es:/var/lib/elasticsearch
+    - ./es:/var/lib/elasticsearch
 redis:
   image: redis
