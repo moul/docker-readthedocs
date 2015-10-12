@@ -3,6 +3,7 @@
 curl -XPUT 'http://elasticsearch:9200/readthedocs/'
 
 cd /app/readthedocs
+ln -s ../manage.py .
 
 PYTHON=/venv/bin/python
 $PYTHON manage.py syncdb --noinput
