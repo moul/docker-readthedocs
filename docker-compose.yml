@@ -7,7 +7,7 @@ db:
   volumes:
     - ./pgsql:/var/lib/postgresql
 readthedocs:
-  image: moul/readthedocs
+  build: .
   ports:
     - "8000:8000"
   links:
