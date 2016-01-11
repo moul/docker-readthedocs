@@ -1,27 +1,27 @@
-Readthedocs in Docker
-=====================
+# Readthedocs in Docker
 
 A Docker container of Readthedocs (RTD).
 
-Usage
------
+## Usage
 
-Run as a daemon :
+Run using docker-compose:
 
-    docker run -d -p 8000:8000 moul/readthedocs
+* start a readthedocs container + its dependencies (postgresql, elasticsearch and redis)
 
-Run in foreground :
+```console
+$ docker-compose run --service-ports --rm readthedocs
+# or
+$ make run
+```
 
-    docker run -it -p 8000:8000 moul/readthedocs
+---
 
 Run in debug mode (bash) :
 
     make run
     # or
     docker run -it --rm --entrypoint=bash moul/readthedocs
-    
-Build the container from sources :
 
-    docker build -t moul/readthedocs .
-    # or
-    make build
+## License
+
+MIT
