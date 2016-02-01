@@ -1,4 +1,3 @@
-from readthedocs.settings.docker import *
 from readthedocs.settings.sqlite import *
 
 import os
