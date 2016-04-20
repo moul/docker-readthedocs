@@ -1,4 +1,4 @@
-from readthedocs.settings.sqlite import *
+from readthedocs.settings.dev import *
 
 import os
 environ = os.environ
