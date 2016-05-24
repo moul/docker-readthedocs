@@ -18,7 +18,7 @@ $ make run
 
 Run in debug mode (bash) :
 
-    make run
+    make debug-run
     # or
     docker run -it --rm --entrypoint=bash moul/readthedocs
 
