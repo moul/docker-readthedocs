@@ -1,5 +1,7 @@
 # Readthedocs in Docker
 
+[![GuardRails badge](https://badges.production.guardrails.io/moul/docker-readthedocs.svg)](https://www.guardrails.io)
+
 A Docker container of Readthedocs (RTD).
 
 ## Usage
